@@ -16,10 +16,11 @@ double fatorial(int n){
 }
 
 double euler(int n){
-    double valorE = 0;
+    double valorE = 1;
+    int i;
 
-    for(valorE = 1; n > 1; n--){
-    valorE = valorE + (1 / fatorial(n - 1));
+    for(i = 1; i <= n ; i++){
+    valorE = valorE + (1 / fatorial(i));
     }
 
     return valorE;
