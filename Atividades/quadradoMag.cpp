@@ -62,15 +62,27 @@ int main (){
     for(i = 0; i < linhas; i++){
         somaDS = somaDS + matriz[i][colunas - i - 1];
     }
+    int resultadoL;
+    int resultadoC;
 
     for(i = 0; i < linhas; i++){
         for(j = 0; j < colunas; j++){
-            if (somaDS == somaDP && somaDP == somaC[j] && somaC[j] == somaL[i])
-            {
-                cout << "sim";
-            } else{ cout << "não"; }
+            if(somaL[i] == somaL[i+1]){
+                resultadoL = somaL[i];
+            }
         }
     }
+    for(j = 0; j < colunas; j++){
+        for(i= 0; i < linhas; i++){
+            if(somaC[j] == somaC[j+1]){
+            resultadoC = somaC[j];
+            } 
+        }
+    }
+
+    if (somaDS == somaDP && somaDP == resultadoC && resultadoC == resultadoL){
+        cout << "sim" << "\n";
+            }else { cout << "não" << "\n"; }
             
 
 
