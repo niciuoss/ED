@@ -5,13 +5,9 @@
 
 using namespace std;
 
-bool primo (int i){
+bool primo (int n){
     bool resultado = true;
-    int cont;
-    int n;
-    
-    //cout << "Digite um número n: ";
-    cin >> n;
+    int i;
     
     for( i = 2; i < n; i++){
         if ( n % i == 0 ){
@@ -27,15 +23,15 @@ int main (){
     int a = 0;
     int b = 0;
     int i = 0;
-    int j = 0;
 
     cin >> a;
     cin >> b;
 
-    for(j = 2; j < b; j++){
-        
+    for(i = a; i <= b; i++){
+     if(primo(i)){
+         cout << i << "\n";
+     }   
     }
 
-    //cout << primo(i) << "\n";
-
+    return 0;
 }
