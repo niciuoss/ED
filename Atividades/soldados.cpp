@@ -14,11 +14,6 @@ int main(){
     int j;
     int **matriz;
 
-    /*cout << "Quantas linhas: ";
-    cin >> linhas;
-    cout << "Quantas colunas: ";
-    cin >> colunas;*/
-
     matriz = (int**) new int(linhas);
     for(i = 0; i < linhas; i++){
         matriz[i] = (int*) new int(colunas);
@@ -30,11 +25,16 @@ int main(){
         }
     }
 
-    for(i = 0; i < linhas; i++){
+    int cont = 0;
+    for(i = 0; i < linhas -1 ; i++){
         for(j = 0; j < colunas; j++){
-            if(matriz[i][j])
+            if(matriz[i][j] > matriz[i+1][j]){
+                cont++;
+            }
         }
     }
+
+    cout << cont << "\n";
 
     free(matriz);
 
