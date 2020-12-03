@@ -6,7 +6,9 @@
 using namespace std;
 
 int main (){
-  
+    
+    setlocale(LC_ALL, "");
+
     int quantP = 1;
     double *valor;
     double *chute;
