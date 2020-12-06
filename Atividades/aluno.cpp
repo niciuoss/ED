@@ -44,5 +44,7 @@ int main(){
     leitura(pessoa);
     imprime(pessoa);
 
+    free(pessoa);
+
 return 0;
 }
