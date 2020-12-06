@@ -70,13 +70,13 @@ int main (){
     int contE = 0;
     for(i = 0; i < quantP; i++){
         if((chute[i] - valor[i]) < (auxS[i] - valor[i])){
-            contP++;//0/1/1
+            contP++;
         }
         else if ((chute[i] - valor[i]) > ( auxS[i] - valor[i])){
-            contS++;//1/0/0
+            contS++;
         }
         else if (( chute[i] - valor[i]) == ( auxS[i] - valor[i])){
-            contE++;//0/0/0
+            contE++;
         }
     }
     //cout << contP << "\n";
