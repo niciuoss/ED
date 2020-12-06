@@ -60,7 +60,7 @@ int main(){
     setlocale(LC_ALL, "");
 
     aluno *alunos;
-    alunos = (aluno*) new int(2);
+    alunos = new aluno[2];
 
     leitura(alunos);
     maiornota(alunos);

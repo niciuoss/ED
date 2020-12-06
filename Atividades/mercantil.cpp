@@ -20,14 +20,14 @@ int main (){
     cin >> quantP;
     
     cout << "O valor de cada produto: ";
-    valor = (double*) new int(quantP);
+    valor = new double[quantP];
     for(i = 0; i < quantP; i++){
         cin >> valor[i];
         //cout << valor[i] << "\n";
     }    
 
     cout << "O chute do primeiro: ";
-    chute = (double*) new int(quantP);
+    chute = new double [quantP];
     for(i = 0; i < quantP; i++){
         cin >> chute[i];
         //cout << chute[i] << "\n";

@@ -14,7 +14,7 @@ int main(){
     int j;
     int **matriz;
 
-    matriz = (int**) new int(linhas);
+    matriz = (int**) new int[linhas];
     for(i = 0; i < linhas; i++){
         matriz[i] = (int*) new int(colunas);
     }

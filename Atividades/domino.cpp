@@ -14,7 +14,7 @@ int main(){
     cout << "Digite o tamanho do vetor: ";
     cin >> size;
     
-    alturas = (int*) new int(size);
+    alturas = new int[size];
 
     cout << "Digite o tamanho de cada peça: ";
     int i = 0;
