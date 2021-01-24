@@ -30,4 +30,7 @@ double circ_getArea(Circulo *c);
 // false: caso contrario.
 bool circ_interior(Circulo *c, Ponto *p);
 
+//Imprime o círculo
+void circ_imprime(Circulo *c);
+
 #endif

@@ -1,5 +1,8 @@
 #include "Circulo.h"
 #include <math.h>
+#include <iostream>
+
+using namespace std;
 
 struct Circulo{
     Ponto *centro;
@@ -51,4 +54,8 @@ double circ_getArea(Circulo *c){
 
 bool circ_interior(Circulo *c, Ponto *p){
 
+}
+
+void circ_imprime(Circulo *c){
+    cout << "[" << "raio: " << c->raio << "," << "x:" << pto_getX(c->centro) << "y:" << pto_getY(c->centro) << "]" << endl;
 }
