@@ -29,7 +29,7 @@ double circ_getArea(Circulo *c);
 // true: se o ponto esta contido no circulo;
 // false: caso contrario.
 bool circ_interior(Circulo *c, Ponto *p);
-
+    
 //Imprime o círculo
 void circ_imprime(Circulo *c);
 

@@ -1,5 +1,6 @@
 #include "Ponto.h"
 #include <math.h>
+#include <iostream>
 
 struct Ponto{
     int x;
@@ -15,10 +16,12 @@ Ponto *pto_cria(double x, double y){
     return p; 
 }
 
-void pto_libera(Ponto* p){
-    delete[] p;
-}
-
+void pto_libera(Ponto *p) { 
+    if(p != nullptr) {
+        delete p;
+        std::cout << "ponto liberado" << std::endl;
+    }
+} 
 double pto_getX(Ponto *p){
     return p->x;
 }

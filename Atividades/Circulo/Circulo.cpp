@@ -49,11 +49,21 @@ double circ_getY(Circulo *c){
     return pto_getY(c-> centro);
 } 
 double circ_getArea(Circulo *c){
-     
+    double area = (M_PI * pow (c->raio, 2));
+
+    return area; 
 }
 
+// Recebe um Ponto p e um Circulo c e retorna:
+// true: se o ponto esta contido no circulo;
+// false: caso contrario.
 bool circ_interior(Circulo *c, Ponto *p){
-
+ 
+    if (pto_getX(c->centro, p) <= (pto_getX(c->centro) + c->raio)){
+        return true;
+    } else {
+        return false; 
+    }
 }
 
 void circ_imprime(Circulo *c){
