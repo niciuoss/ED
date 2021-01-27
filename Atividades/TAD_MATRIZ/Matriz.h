@@ -2,6 +2,7 @@
 #ifndef MATRIZ_H
 #define MATRIZ_H
 
+
 class Matriz {
     private:
         int _l;     // numero de linhas da matriz
