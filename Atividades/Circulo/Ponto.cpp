@@ -39,12 +39,9 @@ void pto_setY(Ponto *p, double y){
 }
 
 double pto_distancia(Ponto* p1, Ponto* p2){
-    double resultado = 0.0;
-    double xa = p1->x;
-    double ya = p1->y;
-    double xb = p2->x;
-    double yb = p2->y;
-    
-    resultado = sqrt(pow(xb-xa, 2) + pow(yb-ya,2));
+    double dx = p2->x - p1->x;
+    double dy = p2->y- p1->y;
+ return sqrt(dx*dx + dy*dy);
+    //return resultado;
 }
 

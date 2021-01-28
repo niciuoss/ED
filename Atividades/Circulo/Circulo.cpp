@@ -2,8 +2,6 @@
 #include <math.h>
 #include <iostream>
 
-using namespace std;
-
 struct Circulo{
     Ponto *centro;
     double raio;
@@ -18,7 +16,11 @@ Circulo *circ_cria(double raio, Ponto *centro){
 }
 
 void circ_libera(Circulo *c){
-    delete[] c;
+    if(c != nullptr){
+        pto_libera(c->centro);
+        delete[] c;
+        std::cout << "circulo liberado" << std::endl;
+    }
 }
 
 // setters
@@ -58,14 +60,10 @@ double circ_getArea(Circulo *c){
 // true: se o ponto esta contido no circulo;
 // false: caso contrario.
 bool circ_interior(Circulo *c, Ponto *p){
- 
-    if (pto_getX(c->centro, p) <= (pto_getX(c->centro) + c->raio)){
+    double dist = pto_distancia(c->centro, p);
+    if(dist <= circ_getRaio(c)){
         return true;
     } else {
-        return false; 
+        return false;
     }
-}
-
-void circ_imprime(Circulo *c){
-    cout << "[" << "raio: " << c->raio << "," << "x:" << pto_getX(c->centro) << "y:" << pto_getY(c->centro) << "]" << endl;
 }
