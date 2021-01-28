@@ -31,6 +31,6 @@ double circ_getArea(Circulo *c);
 bool circ_interior(Circulo *c, Ponto *p);
     
 //Imprime o círculo
-void circ_imprime(Circulo *c);
+/*void circ_imprime(Circulo *c);*/
 
 #endif
